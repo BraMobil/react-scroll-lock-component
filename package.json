@@ -42,8 +42,7 @@
     "react-dom": "^15.4.2"
   },
   "repository": {
-    "type": "git",
-    "url": "https://github.com/orteth01/react-scroll-lock-component"
+    "type": "git"
   },
   "pre-commit": [
     "lint",

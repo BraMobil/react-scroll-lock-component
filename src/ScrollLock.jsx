@@ -6,9 +6,9 @@ class ScrollLock extends Component {
         enabled: PropTypes.bool
     }
     static defaultProps = {
+        className: '',
         enabled: true
     }
-    
     constructor(props) {
         super(props);
         this.listenToWheelEvent = this.listenToWheelEvent.bind(this);
