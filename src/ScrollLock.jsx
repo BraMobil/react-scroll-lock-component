@@ -1,6 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 class ScrollLock extends Component {
+    static propTypes = {
+        className: PropTypes.string,
+        enabled: PropTypes.bool
+    }
+    static defaultProps = {
+        enabled: true
+    }
+    
     constructor(props) {
         super(props);
         this.listenToWheelEvent = this.listenToWheelEvent.bind(this);
@@ -67,15 +75,11 @@ class ScrollLock extends Component {
 
     render() {
         return (
-            <div ref={this.setScrollingElement}>
+            <div className={this.props.className} ref={this.setScrollingElement}>
                 {this.props.children}
             </div>
         );
     }
 }
-
-ScrollLock.defaultProps = {
-    enabled: true
-};
 
 export default ScrollLock;
